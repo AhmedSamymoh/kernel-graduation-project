@@ -45,70 +45,12 @@ d. Generate a summary report.
 ### 6. Output
 The Bash script should output a summary report containing identified patterns and key statistics.
 
-
-
-
-### 🏁🏁🏁🏁 Bash script startup code.
-
-
-```bash
-#!/bin/bash
-
-# Bash Script to Analyze Network Traffic
-
-# Input: Path to the Wireshark pcap file
-pcap_file= # capture input from terminal.
-
-# Function to extract information from the pcap file
-analyze_traffic() {
-    # Use tshark or similar commands for packet analysis.
-    # Hint: Consider commands to count total packets, filter by protocols (HTTP, HTTPS/TLS),
-    # extract IP addresses, and generate summary statistics.
-
-    # Output analysis summary
-    echo "----- Network Traffic Analysis Report -----"
-    # Provide summary information based on your analysis
-    # Hints: Total packets, protocols, top source, and destination IP addresses.
-    echo "1. Total Packets: [your_total_packets]"
-    echo "2. Protocols:"
-    echo "   - HTTP: [your_http_packets] packets"
-    echo "   - HTTPS/TLS: [your_https_packets] packets"
-    echo ""
-    echo "3. Top 5 Source IP Addresses:"
-    # Provide the top source IP addresses
-    echo "[your_top_source_ips]"
-    echo ""
-    echo "4. Top 5 Destination IP Addresses:"
-    # Provide the top destination IP addresses
-    echo "[your_top_dest_ips]"
-    echo ""
-    echo "----- End of Report -----"
-}
-
-# Run the analysis function
-analyze_traffic
-
-```
-
-
-
-
-
-
-
-
-
-
 ----------------------------------
-
-#### 🗒️ 🗒️ 🗒️ 🗒️ Expected Input:
-
-Suppose you have a Wireshark pcap file named network_traffic.pcap containing a mix of HTTP and HTTPS traffic.
-
-
 
 
 #### 🗒️ 🗒️ 🗒️ 🗒️Expected Output:
+Suppose you have a Wireshark pcap file named network_traffic.pcap containing a mix of HTTP and HTTPS traffic.
+
 
 ```txt
 ----- Network Traffic Analysis Report -----
@@ -129,13 +71,34 @@ Suppose you have a Wireshark pcap file named network_traffic.pcap containing a m
 
 ----- End of Report -----
 
-
 ```
+#### 🗒️ 🗒️ 🗒️ 🗒️ Actual Output:
+```bash
+----- Network Traffic Analysis Report -----
+1. Total Packets: 4441
+-------------------------------------------
+2. Protocols:
+   - HTTP: 0 packets
+   - HTTPS/TLS: 577 packets
+-------------------------------------------
+3. Top 5 Source IP Addresses:
+- 192.168.1.10: 1514 packets  
+- 142.250.201.4: 987 packets  
+- 142.250.201.35: 731 packets  
+- 142.250.200.206: 280 packets  
+- 142.250.201.54: 100 packets  
+-------------------------------------------
+4. Top 5 Destination IP Addresses:
+- 192.168.1.10: 1514 packets  
+- 142.250.201.4: 987 packets  
+- 142.250.201.35: 731 packets  
+- 142.250.200.206: 280 packets  
+- 142.250.201.54: 100 packets  
 
+-----------  End of Report  ---------------
+```
+```bash
+wlp0s20f3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.10  netmask 255.255.255.0  broadcast 192.168.1.255 # now we know why is top 192.168.1.10 ips
 
-
-
-
-
-
-### Please Submit task to receive your first 🧑‍🎓🧑‍🎓🧑‍🎓🧑‍🎓🧑‍🎓
+````
