@@ -42,7 +42,7 @@ getTop_Src_IPs() {
 
 getTop_dst_IPs() {
 
-    tshark -r "$pcap_file" -T fields -e ip.src | sort | uniq -c | sort -nr | head -5 | while read count ip; do
+    tshark -r "$pcap_file" -T fields -e ip.dst | sort | uniq -c | sort -nr | head -5 | while read count ip; do
         echo "- $ip: $count packets  "
     done  
 }

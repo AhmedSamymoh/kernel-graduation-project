@@ -89,11 +89,11 @@ Suppose you have a Wireshark pcap file named network_traffic.pcap containing a m
 - 142.250.201.54: 100 packets  
 -------------------------------------------
 4. Top 5 Destination IP Addresses:
-- 192.168.1.10: 1514 packets  
-- 142.250.201.4: 987 packets  
-- 142.250.201.35: 731 packets  
-- 142.250.200.206: 280 packets  
-- 142.250.201.54: 100 packets  
+- 192.168.1.10: 2893 packets  
+- 142.250.201.4: 327 packets  
+- 142.250.201.35: 237 packets  
+- 142.250.200.206: 199 packets  
+- 142.250.201.46: 86 packets  
 
 -----------  End of Report  ---------------
 ```
